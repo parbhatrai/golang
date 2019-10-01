@@ -17,7 +17,9 @@ func (p *Page) save() error {
 	}
 
 func handlerFunc(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
 	fmt.Fprint(w, "<h1>Welcome</h1>")
+	fmt.Fprint(w, "To get in touch, please send an email to <a href=\"maileto:support@wiki.com\">support@wiki.com</a>.")
 }
 
 func main() {
